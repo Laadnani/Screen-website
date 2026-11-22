@@ -1,0 +1,65 @@
+---
+title: Doc CRM for opticians
+tagline: Runs an optical shop end to end, from the first eye exam to the frame on the customer's face, with every step tracked per client.
+tracks: [saas, flutter]
+status: "[status]"
+year: "[year]"
+role: Solo developer
+platforms: Web · Windows · Android
+languages: EN · FR · AR (RTL)
+stack: [Flutter, Dart, Firebase Auth, Cloud Firestore, Provider, go_router, fl_chart, shadcn_flutter]
+cardTags: [Flutter, Firestore, Firebase Auth]
+featured: true
+order: 1
+cover: /images/optician-dash/03-client-detail.jpg
+coverLabel: "Client file · Imane Tazi"
+scope: 30+ modules across clients, consultation, inventory, production and sales.
+links:
+  repo: https://github.com/Laadnani/Optician_dash
+screenshots:
+  - src: /images/optician-dash/01-dashboard.jpg
+    caption: Dashboard with sales trend and recent activity
+  - src: /images/optician-dash/05-orders.jpg
+    caption: Orders by status, with this month's revenue
+  - src: /images/optician-dash/04-prescriptions.jpg
+    caption: Prescriptions with per-eye values and expiry
+  - src: /images/optician-dash/02-clients.jpg
+    caption: Client list with insurer and status
+  - src: /images/optician-dash/07-billing.jpg
+    caption: Billing and weekly revenue by type
+  - src: /images/optician-dash/06-sign-in-arabic.jpg
+    caption: Sign-in in Arabic, laid out right to left
+  - src: /images/optician-dash/08-calendar.jpg
+    caption: Calendar with upcoming appointments
+---
+
+## The problem
+
+Small optical shops juggle paper files, spreadsheets and phone calls to track prescriptions, frame stock and orders that pass through a lab. Nothing connects a client's eye exam to the glasses they finally pick up.
+
+## What I built
+
+- **Client files** with identity, insurance, emergency contact and a 15-step client journey.
+- **Clinical records:** versioned prescriptions per eye (SPH, CYL, axis, add, PD), measurements and contact lens fittings.
+- **Inventory** for frames, lenses, contact lenses and accessories.
+- **The full order flow:** quote, order, lab work, mounting, quality check, fitting and delivery.
+- **Billing** with invoices, payments and monthly revenue.
+- **Three languages**, including Arabic with a right-to-left layout.
+
+<Gallery />
+
+## How it works
+
+Each shop is a tenant. All of its data lives under its own path in Firestore, and the security rules check that the signed-in user belongs to that tenant before any read or write.
+
+<TenantDiagram />
+
+## Hard parts
+
+**Keeping shops apart.** A user's tenant comes from their profile document, and every rule reduces to "does this path belong to your shop?". Accounts are provisioned from outside the app, so the client can never create or move a tenant.
+
+**Staying on the free tier.** Cloud Storage needs a paid plan, so profile photos are compressed and stored inline on the user document, with a size cap enforced by both the app and the rules.
+
+## Results
+
+[shops using it, number of clients managed, or what you learned]
