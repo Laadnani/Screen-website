@@ -3,7 +3,6 @@ import { getProjects } from "@/lib/projects";
 import { site } from "@/lib/site";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectGrid } from "@/components/ProjectGrid";
-import { Todo } from "@/components/Todo";
 
 export default function Home() {
   const projects = getProjects().filter((p) => p.featured);
@@ -68,14 +67,18 @@ export default function Home() {
             I trained as a full-stack engineer through the ALX program, working in C, Python, shell and DevOps before moving
             into product work with JavaScript, React and Next.js, then Flutter.
           </p>
-          <p><Todo text="[A few sentences about you: what you enjoy building, what you are looking for next.]" /></p>
+          <p>
+            I fell in love with programming and haven't stopped learning since. I enjoy turning a real business workflow into
+            software people use every day, and making apps that feel good in the hand. Outside pure tech, I'm drawn to
+            problems that touch biology and health. I'm open to SaaS builds and Flutter apps, freelance or as part of a team.
+          </p>
         </div>
       </section>
 
       <section className="contact" id="contact">
         <div>
           <h2>Have a product in mind?</h2>
-          <p>I take on SaaS builds and Flutter apps. <Todo text={site.email} /></p>
+          <p>I take on SaaS builds and Flutter apps. Write to me at <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
         </div>
         <a className="btn btn-primary" href={site.github}>See my GitHub</a>
       </section>

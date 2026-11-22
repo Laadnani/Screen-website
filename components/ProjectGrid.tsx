@@ -6,7 +6,6 @@ const FILTERS = [
   { id: "all", label: "All" },
   { id: "saas", label: "SaaS" },
   { id: "flutter", label: "Flutter" },
-  { id: "web", label: "Web" },
 ];
 
 /** Filter chips over server-rendered cards: hides cards whose data-tracks don't match. */

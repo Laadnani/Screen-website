@@ -1,4 +1,4 @@
-/** Personal details used across the site. Fill the bracketed values. */
+/** Personal details used across the site. */
 export const site = {
   name: "Mohamed Laadnani",
   initials: "ML",
@@ -8,6 +8,6 @@ export const site = {
     "Multi-tenant business tools with Firebase back ends, and cross-platform apps that run on Android, iOS, Windows and the web from one codebase.",
   email: "laadnani.med@gmail.com",
   github: "https://github.com/Laadnani",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/laadnani/",
   url: "https://portfolio-laadnani.netlify.app",
 };

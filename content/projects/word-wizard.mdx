@@ -1,13 +1,14 @@
 ---
 title: word_wizard
-tagline: A small word challenge game that runs in the browser.
-tracks: [web]
-status: "[status]"
-year: "[year]"
+tagline: Guess the hidden five-letter word in five tries, with a hint to help you along.
+tracks: [flutter]
+status: Prototype
+year: "2024–2025"
 role: Solo developer
-platforms: Web
-stack: [HTML, CSS, JavaScript]
-cardTags: [HTML, JavaScript]
+platforms: Android
+languages: EN · FR word lists
+stack: [Flutter, Dart, Provider, Google Fonts, Google Mobile Ads, UMP consent]
+cardTags: [Flutter, Provider, AdMob]
 featured: true
 order: 4
 placeholder: word
@@ -17,8 +18,15 @@ links:
 
 ## The idea
 
-[One or two sentences on the game and its rules.]
+A small word-guessing game. The app picks a random five-letter word, shows a hint, and you get five tries to find it. After each guess, the tiles show which letters are right.
+
+## What I built
+
+- **Game logic in one Provider.** Picks the word and its hint, tracks tries left and the active row, and checks each guess letter by letter.
+- **Reactive tile rows.** Each row of tiles responds to typing, and the focus moves down as you use up your tries.
+- **Word lists in English and French**, about 200 English and 100 French words, each paired with a hint.
+- **Monetisation done properly.** Banner and rewarded ads through Google Mobile Ads, with Google's consent form (UMP), so ads are only personalised when the player agrees.
 
 ## Results
 
-[Live link, or what you learned]
+A working Android prototype. It was my first full Flutter game loop, from state management to ads and consent, and it taught me how much of a release is configuration: Gradle versions, ad units and consent flows.
